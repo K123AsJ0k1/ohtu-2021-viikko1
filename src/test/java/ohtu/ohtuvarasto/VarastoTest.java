@@ -71,14 +71,14 @@ public class VarastoTest {
         varasto.otaVarastosta(2);
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
-    
+    /*
     @Test
     public void oma_testi_2() {
         //return ("saldo = " + saldo + ", vielä tilaa " + paljonkoMahtuu());
         varasto.lisaaVarastoon(2);
         assertEquals("saldo = 2, vielä tilaa 8",varasto.toString());
     }
-    
+    */
     @Test
     public void oma_testi_3() {
         varasto.lisaaVarastoon(11);
