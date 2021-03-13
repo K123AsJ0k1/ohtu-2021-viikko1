@@ -107,40 +107,6 @@ public class VarastoTest {
     
     @Test
     public void oma_testi_7() {
-        Varasto testi_varasto = new Varasto(0);
-        assertEquals(0, testi_varasto);
-    }
-    
-    @Test
-    public void oma_testi_8() {
-        Varasto testi_varasto = new Varasto(0,0);
-        assertEquals(0, testi_varasto.getTilavuus());
-        assertEquals(0, testi_varasto.getSaldo());
-    }
-    
-    @Test
-    public void oma_testi_9() {
-       Varasto testi_Varasto = new Varasto(10, 2);
-       assertEquals(10, testi_Varasto.getTilavuus());
-        assertEquals(2, testi_Varasto.getSaldo());
-    }
-    
-    @Test
-    public void oma_testi_10() {
-       Varasto testi_Varasto = new Varasto(10, -2);
-       assertEquals(10, testi_Varasto.getTilavuus());
-        assertEquals(0, testi_Varasto.getSaldo());
-    }
-    
-    @Test
-    public void oma_testi_11() {
-       Varasto testi_Varasto = new Varasto(10, 10);
-       assertEquals(10, testi_Varasto.getTilavuus());
-       assertEquals(10, testi_Varasto.getSaldo());
-    }
-    
-    @Test
-    public void oma_testi_12() {
         varasto.lisaaVarastoon(2);
         varasto.otaVarastosta(3);
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
