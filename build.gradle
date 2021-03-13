@@ -16,7 +16,7 @@ dependencies {
 }
 
 application {
-    mainClass = 'ohtu.ohtuvarasto.Main'
+    mainClass = 'ohtu-2021-viikko1.ohtu.ohtuvarasto.Main'
 }
 
 jar {
