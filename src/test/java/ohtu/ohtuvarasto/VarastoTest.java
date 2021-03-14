@@ -1,5 +1,8 @@
 package ohtu.ohtuvarasto;
 
+import static java.time.Clock.system;
+import java.io.*;
+import static java.time.Clock.system;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -71,14 +74,13 @@ public class VarastoTest {
         varasto.otaVarastosta(2);
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
-    /*
+    
     @Test
     public void oma_testi_2() {
         //return ("saldo = " + saldo + ", vielä tilaa " + paljonkoMahtuu());
-        varasto.lisaaVarastoon(2);
-        assertEquals("saldo = 2, vielä tilaa 8",varasto.toString());
+        assertEquals("saldo = 0.0, vielä tilaa 10.0",varasto.toString());
     }
-    */
+    
     @Test
     public void oma_testi_3() {
         varasto.lisaaVarastoon(11);
@@ -111,5 +113,34 @@ public class VarastoTest {
         varasto.otaVarastosta(3);
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
     }
+    
+    @Test
+    public void oma_testi_8() {
+        Varasto testi_varasto = new Varasto(0);
+        assertEquals(0.0, testi_varasto.getTilavuus(),vertailuTarkkuus);
+    }
+    
+    @Test
+    public void oma_testi_9() {
+        Varasto testi_varasto = new Varasto(10,5);
+        assertEquals(5, testi_varasto.getSaldo(),vertailuTarkkuus);
+        assertEquals(10, testi_varasto.getTilavuus(),vertailuTarkkuus);
+    }
+    
+    @Test
+    public void oma_testi_10() {
+        Varasto testi_varasto = new Varasto(0,-1);
+        assertEquals(0, testi_varasto.getSaldo(),vertailuTarkkuus);
+        assertEquals(0, testi_varasto.getTilavuus(),vertailuTarkkuus);
+    }
+    
+    @Test
+    public void oma_testi_11() {
+        Varasto testi_varasto = new Varasto(10,12);
+        assertEquals(10, testi_varasto.getSaldo(),vertailuTarkkuus);
+        assertEquals(10, testi_varasto.getTilavuus(),vertailuTarkkuus);
+    }
+    
+    
  
 }
