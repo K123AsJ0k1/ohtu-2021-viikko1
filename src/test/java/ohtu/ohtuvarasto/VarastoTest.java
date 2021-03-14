@@ -137,8 +137,7 @@ public class VarastoTest {
     @Test
     public void oma_testi_11() {
         Varasto testi_varasto = new Varasto(10,12);
-        //Hajoitetaan ensimmäinen, alkuperäinen on 10
-        assertEquals(9, testi_varasto.getSaldo(),vertailuTarkkuus);
+        assertEquals(10, testi_varasto.getSaldo(),vertailuTarkkuus);
         assertEquals(10, testi_varasto.getTilavuus(),vertailuTarkkuus);
     }
     
